@@ -1,0 +1,66 @@
+.navbar {
+  background-color: rgb(228, 203, 171);
+}
+
+.mainMenu {
+  margin-top: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .row > * div {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 10px;
+  }
+
+  /*This would create background at outer edge of the padding and stops it from extending all the way */
+  .col-lg-4 {
+    /* this is how much gap it clips and transparent gets rid of the background */
+    border: 15px transparent solid;
+    background-clip: padding-box;
+    background-color: lightcyan;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  .row > * div {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 10px;
+  }
+
+  .col-lg-4 {
+    box-sizing: border-box;
+    /* this is how much gap it clips and transparent gets rid of the background */
+    border: 15px transparent solid;
+    background-clip: padding-box;
+    background-color: lightcyan;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+  .nav-link {
+    border: rgb(19, 18, 18) 1px solid;
+    font-size: large;
+    text-align: center;
+  }
+
+  .row > * div {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 10px;
+  }
+
+  .col-lg-4 {
+    box-sizing: border-box;
+    /* this is how much gap it clips and transparent gets rid of the background */
+    border: 15px transparent solid;
+    background-clip: padding-box;
+    background-color: lightcyan;
+  }
+}

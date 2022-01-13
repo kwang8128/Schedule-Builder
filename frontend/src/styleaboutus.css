@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* margin: 0; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* .container-fluid {
+} */
+
+.person-container {
+  border: 5px solid antiquewhite;
+  border-radius: 10px;
+}
+
+.personimg {
+  max-width: 80%;
+  float: left;
+}
+
+.name {
+  margin-top: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.desc {
+  margin-left: 10px;
+  max-width: 70%;
+  float: left;
+}
+
+/* .navbar {
+  background-color: rgb(228, 203, 171);
+  position: sticky;
+} */
+
+.mainMenu {
+  margin-top: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* Desktop View */
+@media (min-width: 992px) {
+  .row > * div {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 10px;
+  }
+
+  /*This would create background at outer edge of the padding and stops it from extending all the way */
+  .col-lg-4 {
+    /* this is how much gap it clips and transparent gets rid of the background */
+    border: 15px transparent solid;
+    background-clip: padding-box;
+    background-color: lightcyan;
+  }
+}
+
+/* Tablet View */
+@media (min-width: 577px) and (max-width: 991px) {
+  .row > * div {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 10px;
+  }
+
+  .col-lg-4 {
+    box-sizing: border-box;
+    /* this is how much gap it clips and transparent gets rid of the background */
+    border: 15px transparent solid;
+    background-clip: padding-box;
+    background-color: lightcyan;
+  }
+
+  .personimg {
+    min-width: 80%;
+    float: left;
+  }
+}
+
+/* Mobile View */
+@media (min-width: 0px) and (max-width: 576px) {
+  .nav-link {
+    border: rgb(19, 18, 18) 1px solid;
+    font-size: large;
+    text-align: center;
+  }
+
+  .row > * div {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 10px;
+  }
+
+  .col-lg-4 {
+    box-sizing: border-box;
+    /* this is how much gap it clips and transparent gets rid of the background */
+    border: 15px transparent solid;
+    background-clip: padding-box;
+    background-color: lightcyan;
+  }
+}

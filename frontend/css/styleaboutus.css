@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: #ddd; */
 }
 
 code {
@@ -31,8 +32,9 @@ code {
 
 .name {
   margin-top: 10px;
+  margin-left: 10px;
   font-size: 25px;
-  /* text-aligcenterter; */
+  /* text-align: center; */
 }
 
 .desc {

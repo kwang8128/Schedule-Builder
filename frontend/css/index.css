@@ -25,3 +25,7 @@ code {
 .form-control {
   width: 20%;
 }
+
+.mb-3 {
+  margin-left: 5px;
+}

@@ -32,13 +32,14 @@ code {
 .name {
   margin-top: 10px;
   font-size: 25px;
-  text-align: center;
+  /* text-aligcenterter; */
 }
 
 .desc {
   margin-left: 10px;
   max-width: 70%;
   float: left;
+  text-align: justify;
 }
 
 /* .navbar {
@@ -67,6 +68,10 @@ code {
     border: 15px transparent solid;
     background-clip: padding-box;
     background-color: lightcyan;
+  }
+
+  .name {
+    text-align: left !important;
   }
 }
 

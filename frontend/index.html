@@ -62,11 +62,13 @@
     </ul>
     
     <h2>Enter Lecture: </h2>
-    <p>dotw: <input type="text" id="dotw"></p>
-    <p>start: <input type="text" id="start"></p>
-    <p>end: <input type="text" id="end"></p>
-    <p>name: <input type="text" id="name"></p>
-    <button id="add-lecture">Add</button>
+    
+    <p>Name: <input type="text" id="name"></p>
+    <!-- <p>Day of The Week: <input type="datetime-local" id="dotw"></p> -->
+    <p>Start Time: <input type="datetime-local" id="start"></p>
+    <p>End Time: <input type="datetime-local" id="end"></p>
+    <button type="button" id="add-lecture" class="btn btn-primary">Add</button>
+    <button type="button" id="submit" onclick="calculate()" class="btn btn-primary">Submit</button>
   
     <!--
         <div class="mb-3">

@@ -12,6 +12,7 @@ async def read_item(item_id):
 
 @app.post("/test/{test_id}")
 async def test(test_id: int, request: Request):
+    print("success")
     return await request.json()
 
 app.mount("/", StaticFiles(directory="frontend", html=True), name="static")

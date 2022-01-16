@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from fastapi import Request
 from datetime import datetime
 from typing import List
-# from assign import *
+from assign import *
 
 class Lecture(BaseModel):
     name: str
@@ -28,10 +28,13 @@ async def test(test_id: int, request: Request):
 
 @app.post("/lectures")
 async def read_lectures(lectures: Request):
-    print("success")
+    print("successful")
     lectures_list = await lectures.json()
-    print(lectures_list)
-    # results = assign(lectures_list)
+    #print(lectures_list)
+    result = assign(lectures_list) # result is an arr containing the list of lectures w/ assigned classrooms and min classes needed (int)
+                                   # had to add extra dt fields to store datetime objs so strings weren't overwritten
+                                   # these can be ignored when returning response to frontend
+    print(result) 
     return lectures_list
 
 def algorithm(lectures):

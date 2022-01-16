@@ -35,7 +35,7 @@ async def read_lectures(lectures: Request):
                                    # had to add extra dt fields to store datetime objs so strings weren't overwritten
                                    # these can be ignored when returning response to frontend
     print(result) 
-    return lectures_list
+    return result
 
 def algorithm(lectures):
     #put algorithm here

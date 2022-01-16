@@ -18,14 +18,14 @@ def assign(lectures):
 
     for j in range(1, len(lectures)):
         if (lectures[j]["dt_starttime"] >= min_heap[0][0]):
-             # Lecture is compatible with classroom if starttime > last lectures finish time in classroom 
+             # Lecture is compatible with classroom if starttime > last lectures finish time in classroom
              # (since lectures are sorted by starttime)
              classroom = hq.heappop(min_heap)
              hq.heappush(min_heap, (lectures[j]["dt_endtime"], classroom[1]))
              lectures[j]["classroom"] = classroom[1]
         else:
             # Lecture is not compatible with classroon
-            # Need to allocate new classroom for this lecture      
+            # Need to allocate new classroom for this lecture
             min_classes += 1
             hq.heappush(min_heap, (lectures[j]["dt_endtime"], min_classes))
             lectures[j]["classroom"] = min_classes
@@ -35,4 +35,7 @@ def assign(lectures):
     [print (x) for x in lectures]
     print("min classes needed:", min_classes)
     """
+    for lecture in lectures:
+        del lecture["dt_starttime"]
+        del lecture["dt_endtime"]
     return [lectures, min_classes]

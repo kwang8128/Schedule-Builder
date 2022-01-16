@@ -38,8 +38,13 @@ async function sendtoapi() {
     method: "POST",
     body: JSON.stringify(lectures),
   })
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then((response) => {
+        console.log(response);
+        return response.json()})
+    .then((data) => {
+        console.log(data);
+        document.getElementById('results').innerHTML = JSON.stringify(data);
+    });
   // fetch("/items/1234", {
   //   method: "POST",
   //   body: JSON.stringify({input: lectures}),

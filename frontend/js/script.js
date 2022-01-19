@@ -28,7 +28,14 @@ function addLecture() {
   lectures.push(element);
   console.log(JSON.stringify(element));
   console.log("Entire lectures : " + JSON.stringify(lectures));
-  document.getElementById('lectures').innerHTML += ('<ul>'+JSON.stringify(element)+'</ul>');
+  document.getElementById('lectures').innerHTML += ('<ul>' +  
+  element.name +
+  ": " +
+  element.day +
+  " " +
+  element.starttime +
+  " - " +
+  element.endtime + '</ul>');
 }
 
 async function sendtoapi() {
@@ -42,15 +49,32 @@ async function sendtoapi() {
         console.log(response);
         return response.json()})
     .then((data) => {
-        console.log(data);
-        document.getElementById('results').innerHTML = JSON.stringify(data);
-    });
+        console.log(data[0]);
+        document.getElementById('results').innerHTML += 'Minimum number of classes: ' + data[1];
+        data[0].forEach(element => {
+          console.log(element.classroom);
+          if (document.getElementById("Room " + element.classroom) == null)
+          {
+            document.getElementById('results').innerHTML += ('<ul id=\"Room ' + element.classroom + '\">' + 'Room ' + element.classroom + '<ul>');
+          }
+            document.getElementById('Room ' + element.classroom).innerHTML += ('<ul>' + 
+            element.name +
+            ": " +
+            element.day +
+            " " +
+            element.starttime +
+            " - " +
+            element.endtime) + '</ul>';
+          
+        });
+        
   // fetch("/items/1234", {
   //   method: "POST",
   //   body: JSON.stringify({input: lectures}),
   // })
   //   .then((response) => response.json())
   //   .then((data) => console.log(data));
+});
 }
 
 document.querySelector("#add-lecture").addEventListener("click", addLecture);

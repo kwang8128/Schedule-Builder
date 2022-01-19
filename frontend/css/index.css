@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   background-image: url("../images/msedge_WjsZNqBqHS2.png"); 
+    /* margin-left: 5px; */
+  background-size: cover;
 }
 
 code {
@@ -12,7 +15,7 @@ code {
     monospace;
 }
 
-#build {
+/* #build {
   width: 550px;
   border: 1px red solid;
   margin: 10px 5px;
@@ -20,7 +23,7 @@ code {
 
 #build p {
   padding: 5px;
-}
+} */
 
 .form-control {
   width: 50%;
@@ -31,5 +34,23 @@ code {
 }
 
 #add-lecture {
-  margin-left: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+ul {
+  padding-left: 10px;
+}
+
+h2 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#results {
+  margin-left: 10px
+}
+
+p {
+  margin-left: 10px;
 }

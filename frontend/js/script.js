@@ -39,6 +39,7 @@ function addLecture() {
 }
 
 async function sendtoapi() {
+  
   console.log("running calculator");
 
   fetch("../lectures", {
@@ -49,7 +50,8 @@ async function sendtoapi() {
         console.log(response);
         return response.json()})
     .then((data) => {
-        console.log(data[0]);
+        console.log(data);
+        document.getElementById('results').innerHTML = '';
         document.getElementById('results').innerHTML += 'Minimum number of classes: ' + data[1];
         data[0].forEach(element => {
           console.log(element.classroom);

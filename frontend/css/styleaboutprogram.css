@@ -16,6 +16,10 @@ body {
   text-align: center;
 }
 
+#html {
+  
+}
+
 @media (min-width: 992px) {
   .row > * div {
     font-size: 22px;

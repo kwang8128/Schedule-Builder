@@ -14,8 +14,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" href="./images/logo.png">
   </head>
   <body>
+    
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" >
@@ -55,29 +57,27 @@
       </div>
     </nav>
 
-    <h>Added Lectures</h>
-    <ul id="lectures">
-
-    </ul>
-
-    <h2>Enter Lecture: </h2>
-
-    <p>Name: <input type="text" id="name"></p>
-    <p>Day of The Lecture: <input type="date" id="dotw"></p>
-    <p>Start Time: <input type="time" id="start"></p>
-    <p>End Time: <input type="time" id="end"></p>
-    <button type="button" id="add-lecture" class="btn btn-primary">Add</button>
-    <button type="button" id="submit" class="btn btn-primary">Submit</button>
-    <br>
-    <div id="results">
+    <div class="container-fluid"> 
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4"> 
+          <h2>Enter Lecture: </h2>
+            <p>Name: <input type="text" id="name"></p>
+            <p>Day of The Lecture: <input type="date" id="dotw"></p>
+            <p>Start Time: <input type="time" id="start"></p>
+            <p>End Time: <input type="time" id="end"></p>
+            <button type="button" id="add-lecture" class="btn btn-primary">Add</button>
+            <button type="button" id="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <h2>Added Lectures:</h2>
+          <ul id="lectures"></ul>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-4">
+          <h2>Results:</h2>
+          <div id="results"></div>
+        </div>
+      </div>
     </div>
-
-    <!--
-        <div class="mb-3">
-      <label for="" class="form-label">Upload Your CSV File Here</label>
-      <input class="form-control" type="file" id="formFile" accept=".csv"/>
-    </div>
-    -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
